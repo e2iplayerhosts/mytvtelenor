@@ -10,3 +10,5 @@ rm -r -f /tmp/mytvtelenor*
 ~~~
 
 restart enigma2 GUI
+
+![mytvtelenor_channels](https://user-images.githubusercontent.com/6920933/53969947-00be8b80-40fa-11e9-84ed-059061fb10f5.jpg)
