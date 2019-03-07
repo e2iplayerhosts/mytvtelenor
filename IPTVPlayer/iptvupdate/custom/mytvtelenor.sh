@@ -8,10 +8,12 @@ if [ $status -ne 0 ]; then
 fi
 cp $1/hosts/hostmytvtelenor.py $2/hosts/
 hosterr=$?
-cp $1/icons/* $2/icons/
+cp $1/icons/logos/mytvtelenorlogo.png $2/icons/logos/
+logoerr=$?
+cp $1/icons/PlayerSelector/mytvtelenor*.png $2/icons/PlayerSelector/
 iconerr=$?
-if [ $hosterr -ne 0 ] || [ $iconerr -ne 0 ]; then
-	echo "mytvtelenor.sh: copy error from source hosterr[$hosterr], logoerr[$iconerr]"
+if [ $hosterr -ne 0 ] || [ $logoerr -ne 0 ] || [ $iconerr -ne 0 ]; then
+	echo "mytvtelenor.sh: copy error from source hosterr[$hosterr], logoerr[$logoerr, iconerr[$iconerr]"
 fi
 wget --no-check-certificate https://github.com/e2iplayerhosts/mytvtelenor/archive/master.zip -q -O /tmp/mytvtelenor.zip
 if [ -s /tmp/mytvtelenor.zip ] ; then
